@@ -1,0 +1,37 @@
+import java.io.IOException;
+import java.util.LinkedList;
+
+public final class ClassA implements java.io.Serializable, Runnable
+{
+    public ClassA() { val=3; }
+
+    public ClassA(int i) 
+	{
+    	fun[0] = 13;
+    	fun[1] = 24;
+	    try { setVal(i); } catch(Exception e){}
+	}
+
+    public void run() { }
+
+    protected void Pizza() throws IOException {} 
+    public int getVal(){ return val; }
+    public void setVal(int i) throws Exception
+	{
+	    if ( i < 0 ) 
+		throw new Exception("negative value");
+
+	    val = i;
+	}
+
+    public String toString() { return "ClassA"; }
+
+    private void printSomething() { System.out.println("Something"); }
+
+    private int val=3;
+    private double val2 = 0.2;
+    private boolean val3 = true;
+    private LinkedList Hello = new LinkedList();
+    private int[] fun = new int[6];
+   
+}
